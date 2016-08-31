@@ -19,9 +19,11 @@ zookeeper_autopurge_purgeInterval: 0
 zookeeper_autopurge_snapRetainCount: 10
 
 data_dir: /var/lib/zookeeper
-log_dir: /var/log/zookeeper
 zookeeper_dir: /opt/zookeeper-{{zookeeper_version}}
 zookeeper_tarball_dir: /opt/src
+
+log_dir: /var/log/zookeeper
+zookeeper_log4j_properties: null
 
 # List of dict (i.e. {zookeeper_hosts:[{host:,id:},{host:,id:},...]})
 zookeeper_hosts:

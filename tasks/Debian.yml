@@ -21,3 +21,10 @@
   tags: deploy
   notify:
     - Restart zookeeper
+
+- name: Overwrite log4j properties
+  copy: content={{ zookeeper_log4j_properties }} dest=/etc/zookeeper/conf/log4j.properties
+  tags: deploy
+  when: zookeeper_log4j_properties is not null
+  notify:
+    - Restart zookeeper
